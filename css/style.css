@@ -1,0 +1,615 @@
+:root {
+	--golden: #C59d5f;
+	--svart: #252526;
+	--vitt: #ffffff;
+	--grått: #515150;
+}
+
+@font-face {
+	font-family: Herr Von Muellerhoff;
+	src: 	url("HerrVonMuellerhoff-Regular.otf") format("opentype"),
+			url("HerrVonMuellerhoff-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: Herr Von Muellerhoff;
+	font-weight: 600;
+	src: url("HerrVonMuellerhoff-Regular.otf") format("opentype");
+}
+
+html {
+	margin: 0;
+	box-sizing: border-box;
+	font: 1em/1.5 "Cabin", Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-variant-ligatures: normal;
+	font-family: Cabin, Arial, Helvetica, sans-serif; 
+	color: var(--svart);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin-block-start: 0.67em;
+	margin-block-end: 0.67em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+h2 {
+	color: var(--svart);
+	font-weight: 900;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	font-size: 47px;
+}
+
+.wrapper {
+	display: grid;
+	grid-gap: 20px;
+	padding-left: 50px;
+}
+
+.main-nav {
+	background: rgba(255,255,255,0);
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	flex-wrap: wrap;
+	align-items: center;
+	text-transform: uppercase;
+	z-index: 2;
+
+}
+
+.main-nav:not(.is_stuck) {
+	position: fixed;
+	left: 0;
+	right: 0;
+}
+
+.main-nav ul {
+	color: var(--vitt);
+	display: grid;
+	grid-gap: 45px;
+	padding-right: 2rem;
+	list-style: none;
+	grid-template-columns: repeat(16, auto);
+	font-size: 13px;
+	letter-spacing: 1.5px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.headerlogo {
+	grid-column-start: 2;
+}
+
+.header1 {
+	grid-column: -9;
+}
+
+.main-nav ul a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.main-nav ul a:hover {
+	transition: color .2s linear;
+	color: var(--golden);
+}
+
+.showcase {
+	display: grid;
+	grid-gap: 10px;
+	background: url(../bilder/vineyardlane.jpeg);
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: var(--vitt);
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	line-height: 1em;
+}
+
+.showcasetext {
+	justify-content: center;
+	text-align: center;
+}
+
+.headline {
+	color: var(--vitt);
+	font-weight: 900;
+	font-size: 37px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	line-height: 1em;
+}
+
+.headlinetext {
+	margin-top: -16px;
+}
+
+.btn {
+	background: var(--vitt);
+	color: var(--svart);
+	padding: 0.6rem 1.3rem;
+	text-decoration: none;
+	border: 0;
+	border-radius: 7%;
+	font-family: Cabin;
+	font-size: 16px;
+	letter-spacing: 2.3px;
+}
+
+.btn:hover {
+	cursor: pointer;
+	background: var(--golden);
+}
+
+.discoverus {
+	margin-top: 4rem;
+	display: grid;
+	justify-content: center;
+	grid-template-areas: 
+	'discover  .'
+	'story  videosample'
+	'discoverlist  videosample'
+	'signup signup';
+}
+
+.discover {
+	grid-area: discover;
+	font-family: Herr Von Muellerhoff;
+	font-size: 6em;
+	line-height: 0;
+	color: var(--golden);
+	margin-top: 4rem;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.story {
+	grid-area: story;
+	font-family: Source Sans Regular;
+	font-weight: 900;
+	font-size: 2.9rem;
+	line-height: 0;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	text-align: center;
+}
+
+.discoverlist {
+	grid-area: discoverlist;
+	list-style-image: url('../bilder/vinflaska.png');
+	padding: 41px 20px 41px 20px;
+	line-height: 2rem;
+	font-family: Cabin;
+	font-size: 1.1em;
+	color: #585857;
+}
+
+.videosample {
+	grid-area: videosample;
+	text-align: left;
+	margin-left: 8rem;
+}
+
+.signup {
+	grid-area: signup;
+	text-align: center;
+	margin-top: 2.5rem;
+}
+
+.signupbtn {
+	background: #2A2A2A;
+	color: var(--vitt);
+	font-family: Coral;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: 16px;
+	padding: 18px 25px 18px 25px;
+}
+
+.signupbtn:hover {
+	cursor: pointer;
+	transition: background .2s linear;
+	background: var(--golden);
+}
+
+#downarrow {
+	margin-right: 1.2rem;
+}
+
+.mockup {
+	display: grid;
+	margin-top: 3rem;
+	background: url(../bilder/mockup2.jpg);
+	min-height: 455px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+	grid-area: 
+	'. excellent .'
+	'. wines .';
+}
+
+.excellent {
+	grid-area: excellent;
+	font-family: Herr Von Muellerhoff;
+	font-size: 7.5em;
+	margin-top: 8rem;
+	color: var(--golden);
+	text-align: center;
+	transform: translateY(-95px);
+}
+
+.wines {
+	grid-area: wines;
+	font-family: Source Sans Regular;
+	color: var(--vitt);
+	font-weight: 900;
+	font-size: 2.9rem;
+	margin-top: 8rem;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	text-align: center;
+	z-index: 1;
+}
+
+.offerlist {
+	list-style-image: url('../bilder/vinflaska.png');
+	line-height: 2rem;
+	font-family: Cabin;
+	font-size: 1.1em;
+	color: #585857;
+}
+
+.price {
+	font-size: 24px;
+	color: var(--svart);
+	line-height: 2;
+	font-family: Cabin;
+}
+
+.offer {
+	display: grid;
+	grid-gap: 10px;
+		grid-template-areas:
+		'. theoffer signup .';
+}
+
+.theoffer {
+	grid-area: theoffer;
+}
+
+.signups {
+	grid-area: signup;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(1, 100px);
+	margin: 0;
+}
+
+.fnamninput, .lnamninput, .telenrinput, .datuminput, .antaletinput {
+	margin-bottom: .8rem;
+}
+
+input[type=text], select {
+  width: 78%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.skickasignup input[type=submit] {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type=number] {
+  width: 78%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=date] {
+  width: 78%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+}
+
+input[type=tel] {
+  width: 78%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.skickasignup input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.orientsep {
+	margin-top: 4rem;
+	width: 65%;
+	border-color: #EBEBEB;
+	opacity: 0.2;
+}
+
+.orientation {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.location {
+	justify-self: center;
+}
+
+.karta {
+	margin-top: 3.7rem;
+}
+
+.incomparable {
+	display: grid;
+	margin-top: 3rem;
+	background: url(../bilder/mockup2.jpeg);
+	min-height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+	grid-area: 
+	'. incompare .'
+	'. heritage .';
+}
+
+.incompare {
+	grid-area: incompare;
+	font-family: Herr Von Muellerhoff;
+	font-size: 7.5em;
+	margin-top: 8rem;
+	color: var(--golden);
+	text-align: center;
+	transform: translateY(-95px);
+}
+
+.heritage {
+	grid-area: heritage;
+	font-family: Source Sans Regular;
+	color: var(--vitt);
+	font-weight: 900;
+	font-size: 2.9rem;
+	margin-top: 8rem;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	text-align: center;
+	z-index: 1;
+}
+
+.qanda {
+	display: grid;
+	margin-top: 2.5rem;
+	margin-left: 10%;	
+	margin-right: 5rem;
+	grid-template-columns: 1fr 1fr;
+
+}
+
+.questioneer {
+	display: grid;
+	margin-right: 1rem;
+	grid-template-rows: repeat(3, 9vw);
+}
+
+
+.questions {
+	margin: 0;
+	font-weight: 600;
+	color: var(--grått);
+	line-height: 1.625;
+	font-family: Cabin;
+}
+
+.answers {
+	margin: 0;
+	font-family: Cabin;
+	line-height: 1.625;
+}
+
+.galleries {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 5.85vw);
+	margin: 0;
+	grid-gap: 1px;
+}
+
+.galleries img {
+	height: 150px;
+	width: 150px;
+	margin: 0;
+	object-fit: cover;
+}
+
+.galleries img:nth-child(1) {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+.galleries img:nth-child(2) {
+	grid-column-start: 2;
+	grid-row-start: 1;
+}
+
+.galleries img:nth-child(3) {
+	grid-column-start: 3;
+}
+
+.galleries img:nth-child(4) {
+	grid-column-start: 4;
+}
+
+.galleries img:nth-child(5) {
+	grid-column-start: 2;
+	grid-row: 3;
+}
+
+.galleries img:nth-child(6) {
+	grid-column-start: 3;
+	grid-row-start: 3;
+}
+
+.galleries img:nth-child(7) {
+	grid-column-start: 4;
+	grid-row-start: 3;
+}
+
+.galleries img:nth-child(8) {
+	grid-column-start: 5;
+	grid-row-start: 3;
+}
+
+.galleries a {
+	height: 150px;
+	width: 150px;
+	margin: 0;
+	object-fit: cover;
+}
+
+.galleries img:hover {
+	transform: scale(1.02);
+	transition: 0.3s;
+}
+
+.galleries a:nth-child(1) {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+.galleries a:nth-child(2) {
+	grid-column-start: 3;
+	grid-row-start: 1;
+}
+
+.galleries a:nth-child(3) {
+	grid-column-start: 4;
+}
+
+.galleries a:nth-child(4) {
+	grid-column-start: 5;
+}
+
+.galleries a:nth-child(5) {
+	grid-column-start: 2;
+	grid-row: 3;
+}
+
+.galleries a:nth-child(6) {
+	grid-column-start: 3;
+	grid-row-start: 3;
+}
+
+.galleries a:nth-child(7) {
+	grid-column-start: 4;
+	grid-row-start: 3;
+}
+
+.galleries a:nth-child(8) {
+	grid-column-start: 5;
+	grid-row-start: 3;
+}
+
+.neverending {
+	display: grid;
+	margin-top: 3rem;
+	background: url(../bilder/vinrankor.jpg);
+	min-height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	justify-content: center;
+	grid-area: 
+	'. endless .'
+	'. variety .';
+}
+
+.endless {
+	grid-area: endless;
+	font-family: Herr Von Muellerhoff;
+	font-size: 7.5em;
+	margin-top: 8rem;
+	text-shadow: 1.5px 1px var(--grått);
+	color: var(--golden);
+	text-align: center;
+	transform: translateY(-95px);
+}
+
+.variety {
+	grid-area: variety;
+	font-family: Source Sans Regular;
+	color: var(--vitt);
+	font-weight: 900;
+	font-size: 2.9rem;
+	margin-top: 8rem;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	text-align: center;
+	z-index: 1;
+}
+
+.facts {
+	display: grid;
+	grid-template-columns: 1.3fr 1fr;
+	grid-gap: 20px;
+	margin-top: 2rem;
+
+}
+
+.factual {
+	margin-left: 20%;
+
+
+}
+
+.referral {
+
+}
+
+.offerlist
